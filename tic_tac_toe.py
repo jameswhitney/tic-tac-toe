@@ -77,11 +77,11 @@ def check_for_win(board, mark):
     pass
 
 
-# Test each function 
-test_board = ['#', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
-create_board(test_board)
-player = choose_player()
-print(player)
-user_input()
-place_marker(test_board, '&', 7)
-create_board(test_board)
+# Tests
+test_board = ['#', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X'] # List is used to populate a test board
+create_board(test_board) # Creates a board using the values within the test_board list
+player = choose_player() # Randomly choose a player to go first
+print(player)   # Print out which player will go first
+user_input() # Checks that user input is only X or O (case insensitive)
+place_marker(test_board, '&', 7) # Run place_marker using test parameters
+create_board(test_board) # Print the new board based on test parameters passed in via the place_marker function
