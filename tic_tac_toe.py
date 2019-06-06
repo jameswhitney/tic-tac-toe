@@ -7,7 +7,7 @@
 # ####################################################################
 
 
-def show_board(board):
+def create_board(board):
     
     # TODO: Create a blank tic tac toe board
     print('    |   |')
@@ -28,8 +28,25 @@ def user_input():
     # TODO: Accept user input, check to make sure the input is either an X or O
     # Assign the input to a marker to represent X or O. The marker will be
     # used to determine which input will display on the board.
-    pass
+    marker = ''
 
+    while not (marker == 'X' or marker == 'O'):
+
+        # If input is anything other than X or O, continue to prompt user for valid input
+        try: 
+            marker = str(input('Player one: Plese enter either X or O: ')).upper()
+        
+        except ValueError:
+            print('Please select either X or O')
+            continue
+
+
+    if marker == 'X':
+        x_marker = ('X', 'O')
+        print(x_marker)
+    else:
+        y_marker = ('O', 'X')
+        print(y_marker)
 
 def place_marker(board, marker, position):
 
@@ -49,4 +66,5 @@ def check_for_win(board, mark):
 
 # Test each function 
 test_board = ['#', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
-show_board(test_board)
+create_board(test_board)
+user_input()
