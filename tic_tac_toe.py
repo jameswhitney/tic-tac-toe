@@ -52,12 +52,14 @@ def user_input():
         print(y_marker)
 
 
-def choose_first_player():
+def choose_player():
 
     # TODO: Randomly determine if player 1 or player 2 will start
     # the game first.
-    pass
-
+    if random.randint(0, 1) == 0:
+        return 'Player 2 goes first'
+    else:
+        return 'Player 1 goes first'
 
 def place_marker(board, marker, position):
 
@@ -78,4 +80,7 @@ def check_for_win(board, mark):
 # Test each function 
 test_board = ['#', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
 create_board(test_board)
+player = choose_player()
+print(player)
 user_input()
+
