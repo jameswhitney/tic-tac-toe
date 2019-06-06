@@ -11,7 +11,7 @@ import random
 
 
 def create_board(board):
-    
+
     # TODO: Create a blank tic tac toe board
     print('    |   |')
     print('  ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
@@ -67,7 +67,7 @@ def place_marker(board, marker, position):
     # and the desired position for the marker on the board. Use
     # the board list index 1 - 9 to determine where on the board to
     # place the marker.
-    pass
+    board[position] = marker
 
 
 def check_for_win(board, mark):
@@ -83,4 +83,5 @@ create_board(test_board)
 player = choose_player()
 print(player)
 user_input()
-
+place_marker(test_board, '&', 7)
+create_board(test_board)
