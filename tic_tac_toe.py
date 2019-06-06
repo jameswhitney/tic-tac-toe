@@ -74,7 +74,14 @@ def check_for_win(board, mark):
 
     # TODO: Accept board list object and mark, X or O, to determine
     # check what mark has won.
-    pass
+    return ((board[7] == mark and board[8] == mark and board[9] == mark) or # top row
+           (board[4] == mark and board[5] == mark and board[6] == mark) or # middle row
+           (board[1] == mark and board[2] == mark and board[3] == mark) or # bottom row
+           (board[7] == mark and board[4] == mark and board[1] == mark) or # right column
+           (board[8] == mark and board[5] == mark and board[2] == mark) or # middle column
+           (board[9] == mark and board[6] == mark and board[3] == mark) or # left column
+           (board[7] == mark and board[5] == mark and board[3] == mark) or # diagonal top left to bottom right
+           (board[9] == mark and board[5] == mark and board[1] == mark)) # diagonal top right to bottom left
 
 
 # Tests
@@ -85,3 +92,5 @@ print(player)   # Print out which player will go first
 user_input() # Checks that user input is only X or O (case insensitive)
 place_marker(test_board, '&', 7) # Run place_marker using test parameters
 create_board(test_board) # Print the new board based on test parameters passed in via the place_marker function
+win = check_for_win(test_board, 'X')
+print(win)
