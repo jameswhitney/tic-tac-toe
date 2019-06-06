@@ -6,6 +6,9 @@
 # play again.                                                        #
 # ####################################################################
 
+# Use random module to assign player order
+import random
+
 
 def create_board(board):
     
@@ -47,6 +50,14 @@ def user_input():
     else:
         y_marker = ('O', 'X')
         print(y_marker)
+
+
+def choose_first_player():
+
+    # TODO: Randomly determine if player 1 or player 2 will start
+    # the game first.
+    pass
+
 
 def place_marker(board, marker, position):
 
