@@ -10,7 +10,17 @@
 def show_board(board):
     
     # TODO: Create a blank tic tac toe board
-    pass
+    print('    |   |')
+    print('  ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
+    print('    |   |')
+    print('------------')
+    print('    |   |')
+    print('  ' + board[4] + ' | ' + board[5] + ' | ' + board[6])
+    print('    |   |')
+    print('------------')
+    print('    |   |')
+    print('  ' + board[3] + ' | ' + board[2] + ' | ' + board[1])
+    print('    |   |')
 
 
 def user_input():
@@ -38,3 +48,5 @@ def check_for_win(board, mark):
 
 
 # Test each function 
+test_board = ['#', 'X', 'O', 'X', 'O', 'X', 'O', 'X', 'O', 'X']
+show_board(test_board)
